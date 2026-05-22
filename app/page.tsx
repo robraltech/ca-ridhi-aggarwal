@@ -34,26 +34,38 @@ import {
   Lightbulb,
 } from "lucide-react"
 
+
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="flex items-center">
-              <div className="text-2xl font-bold text-primary">
-                <span className="border-2 border-primary px-2 py-1">R</span>
-                <span className="text-primary -ml-1">A</span>
-              </div>
-              <div className="ml-2 text-xs leading-tight">
-                <div className="font-bold text-primary">RIDHI AGGARWAL</div>
-                <div className="text-primary font-semibold">&amp; ASSOCIATES</div>
-                <div className="text-muted-foreground text-[10px]">CHARTERED ACCOUNTANTS</div>
-              </div>
-            </div>
-          </div>
+          <Link href="/" className="flex items-center gap-3">
+  <Image
+    src="/ca-logo.png"
+    alt="CA India Logo"
+    width={70}
+    height={70}
+    className="h-14 w-auto"
+    priority
+  />
 
+  <div className="leading-tight">
+    <div className="font-bold text-primary text-sm md:text-base">
+      RIDHI AGGARWAL
+    </div>
+
+    <div className="text-primary font-semibold text-sm md:text-base">
+      & ASSOCIATES
+    </div>
+
+    <div className="text-muted-foreground text-[10px] md:text-xs tracking-wide">
+      CHARTERED ACCOUNTANTS
+    </div>
+  </div>
+</Link>
           <nav className="hidden md:flex items-center gap-8">
             <Link href="#" className="text-sm font-medium text-foreground hover:text-primary">
               Home
@@ -478,13 +490,6 @@ export default function Home() {
               </Card>
             ))}
           </div>
-
-          <div className="flex justify-center gap-3 mt-8">
-            <div className="w-3 h-3 rounded-full bg-primary" />
-            <div className="w-3 h-3 rounded-full border border-gray-400 bg-white" />
-            <div className="w-3 h-3 rounded-full border border-gray-400 bg-white" />
-            <div className="w-3 h-3 rounded-full border border-gray-400 bg-white" />
-          </div>
         </div>
       </section>
 
@@ -606,19 +611,29 @@ export default function Home() {
         <div className="container mx-auto px-6 lg:px-12 xl:px-20">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="flex items-center">
-                  <div className="text-2xl font-bold">
-                    <span className="border-2 border-white px-2 py-1">R</span>
-                    <span className="-ml-1">A</span>
-                  </div>
-                  <div className="ml-2 text-xs leading-tight">
-                    <div className="font-bold">RIDHI AGGARWAL</div>
-                    <div className="font-semibold">&amp; ASSOCIATES</div>
-                    <div className="text-white/60 text-[10px]">CHARTERED ACCOUNTANTS</div>
-                  </div>
-                </div>
-              </div>
+              <div className="flex items-center gap-3 mb-4">
+  <Image
+    src="/ca-logo.png"
+    alt="CA India Logo"
+    width={60}
+    height={60}
+    className="h-12 w-auto"
+  />
+
+  <div className="leading-tight">
+    <div className="font-bold text-white">
+      RIDHI AGGARWAL
+    </div>
+
+    <div className="font-semibold text-white">
+      & ASSOCIATES
+    </div>
+
+    <div className="text-white/60 text-[10px]">
+      CHARTERED ACCOUNTANTS
+    </div>
+  </div>
+</div>
               <p className="text-white/60 text-sm mb-4">Reliable. Transparent. Trusted.</p>
               <div className="flex gap-4">
                 <Link href="#" className="text-white/60 hover:text-white">
